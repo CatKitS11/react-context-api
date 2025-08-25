@@ -12,7 +12,7 @@ function HomePage() {
       <div className="product-list">
         {products.map((product) => {
           return (
-            <div className="product">
+            <div key={product.id} className="product">
               <div className="product-preview">
                 <img
                   src="https://via.placeholder.com/250/250"
@@ -28,7 +28,7 @@ function HomePage() {
                 <div className="product-actions">
                   <button
                     className="view-button"
-                    onClick={() => navigate(`/product/view/${product.id}`)}
+                    onClick={() => navigate(`/product/${product.id}`)}
                   >
                     View
                   </button>
